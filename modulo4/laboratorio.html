@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Mostrar el primer contacto (primero)
+// Mostrar el último contacto (último)
+// Añadir un nuevo contacto (nuevo)
+let contacts = [{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}];
+alert(`PRIMER CONTACTO :${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`)
+alert(`ULTIMO CONTACTO :${contacts[contacts.length-1].name} / ${contacts[0].phone} / ${contacts[0].email}`)
+
+let nombre = prompt('Ingrese el nombre')
+let telefono = prompt('Ingrese el telefono')
+let email = prompt('Ingrese el email')
+
+let newContacto = nombre && telefono && email ? {name:nombre,phone:telefono,email:email}: '' 
+contacts.push({name:nombre, phone: telefono, email:email})
+
+let mensaje = newContacto ? `CONTACTO NUEVO: ${newContacto.name} , ${newContacto.phone}, ${newContacto.email}`: 'NO SE COMPLETARON TODOS LOS CAMPOS' 
+
+alert(mensaje)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const INSURANCE_COST = 2.99;
+
+        let shippingCost = 9.99;
+        let isOrderValid = true;
+
+        let userAge = 22;
+        let points = 400;
+        let cartValue = 199;
+        let hasPromoCode = false;
+        let hasParentsApproval = false;
+        let addInsurance = true;
+
+        /** calcular costos de envío*/
+        if ((userAge > 65) || (userAge >= 21 && (hasPromoCode || cartValue > 300 || points > 500))) {
+            shippingCost = 0;
+        } else if (userAge < 21 && hasParentsApproval) {
+            shippingCost = shippingCost - 5;
+        } else if (userAge < 21) {
+            isOrderValid = false;
+        }
+
+        /** tomar en cuenta la aseguranza */
+        if (isOrderValid && addInsurance && !hasPromoCode) {
+            shippingCost += INSURANCE_COST;
+        }
+
+        /** mostrar mensaje */
+        if (isOrderValid) {
+            alert(shippingCost);
+        } else {
+            alert("No se puede ordenar si es menor que 21");
+        }
+
+        let gate = prompt("Elegir la puerta: a, b, o c");
+        let win = false;
+
+        switch (gate) {
+            case "a":
+                alert("Puerta A: Vacía");
+                break;
+            case "b":
+                alert("Puerta B: Premio Mayor");
+                win = true;
+                break;
+            case "c":
+                alert("Puerta C: Vacía");
+                break;
+            default:
+                alert("No existe la Puerta " + String(gate));
+        }
+
+        if (win) {
+            alert("¡Ganador!");
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
