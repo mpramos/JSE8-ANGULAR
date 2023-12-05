@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="myId" type="text"></input>
+    <button onclick="alert(document.getElementById('myId').value,'holaaaa')">Obtener Texto</button>
+
+    <script>
+        let remove = confirm("¿Eliminar todos los datos?");
+        let message = remove ? "Eliminando Datos" : "Cancelado"
+        console.log(message);
+
+
+        let name = window.prompt("¿Cuál es tu nombre?", "Juan Pérez");
+        name = name ? name : "anónimo";
+
+        let age = prompt("Hola " + name + " ¿Cuántos años tienes?");
+        alert(name + " tiene " + age + " años");
+
+    </script>
+
+
+
+</body>
+
+</html>
