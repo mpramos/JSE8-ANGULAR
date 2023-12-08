@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    let contacts = [{
+        name: "Maxwell Wright",
+        phone: "(0191) 719 6495",
+        email: "Curabitur@nonummyac.co.uk"
+        }, {
+        name: "Raja Villarreal",
+        phone: "0866 398 2895",
+        email: "posuera@sed.com"
+        }, {
+        name: "Helen Richards",
+        phone: "0800 1111",
+        email: "libero@convallis.edu"
+        }];
+
+        //TODO completar el ejercicio para mostrar todos los contactos y añadir un nuevo contacto 
+        let salir = false
+        while (!salir) {
+                salir = !confirm('Quieres seguir?')
+            if(!salir){
+                for (let contact  of contacts) {
+                 alert(`${contact.name}, ${contact.phone}`)           
+            }
+} 
+        }
+</script>
+</body>
+</html>
+
+
+    
